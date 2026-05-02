@@ -1,0 +1,42 @@
+[project]
+name = "edge-acoustic-detection"
+version = "0.1.0"
+description = ""
+authors = []
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0" 
+cupy-cuda13x = {version = "^14.0.1", markers = "platform_machine == 'x86_64'"}  # desktop
+cupy-cuda12x = {version = "^13.0",   markers = "platform_machine == 'aarch64'"} # jetson
+pyserial = "^3.5"
+numpy = "^2.4.4"
+pandas = "^3.0.2"
+tqdm = "^4.67.3"
+soundfile = "^0.13.1"
+scikit-learn = "^1.8.0"
+
+[dependency-groups]
+dev = [
+    "pytest (>=8.4.2,<9.0.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)",
+    "ruff (>=0.13.1,<0.14.0)"
+]
+notebook = [
+    "jupyter (>=1.1.1,<2.0.0)",
+    "ipykernel (>=6.30.1,<7.0.0)",
+    "matplotlib (>=3.10.6,<4.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint.per-file-ignores]
+"notebooks/*.ipynb" = ["E402"]
+
