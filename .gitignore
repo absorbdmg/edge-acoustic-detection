@@ -214,7 +214,6 @@ data/*
 *.TXT
 *.h5
 *.hdf5
-*.pkl
 *.npy
 *.npz
 !data/.gitkeep/data
