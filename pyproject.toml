@@ -11,7 +11,7 @@ requires-python = ">=3.12"
 package-mode = false
 
 [tool.poetry.dependencies]
-python = ">=3.12,<4.0" 
+python = ">=3.12" 
 cupy-cuda13x = {version = "^14.0.1", markers = "platform_machine == 'x86_64'"}  # desktop
 cupy-cuda12x = {version = "^13.0",   markers = "platform_machine == 'aarch64'"} # jetson
 pyserial = "^3.5"
@@ -20,6 +20,10 @@ pandas = "^3.0.2"
 tqdm = "^4.67.3"
 soundfile = "^0.13.1"
 scikit-learn = "^1.8.0"
+rich = "^15.0.0"
+fastapi = "^0.136.1"
+uvicorn = {extras = ["standard"], version = "^0.46.0"}
+websockets = "^16.0"
 
 [dependency-groups]
 dev = [
@@ -39,4 +43,5 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.ruff.lint.per-file-ignores]
 "notebooks/*.ipynb" = ["E402"]
+
 
