@@ -48,7 +48,7 @@ poetry install
 
 ```bash
 # Train (after features are cached)
-poetry run python scripts/train.py
+poetry run python training/train.py
 
 # Inference on a wav file
 poetry run python scripts/infer.py path/to/audio.wav
