@@ -4,6 +4,8 @@ Real-time acoustic drone detector. Built for the Army xTech National Security Ha
 
 Two MEMS microphones → ESP32-S3 → Jetson Orin Nano. Bio-inspired modulation features feed a probabilistic classifier; GCC-PHAT on stereo audio gives bearing. <200ms latency, no GPS, no RF emissions.
 
+<img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/25e115e1-4b32-4097-9216-52d5b7ce56ba" />
+
 ## Hardware
 
 - 2× INMP441 MEMS microphones (I2S)
